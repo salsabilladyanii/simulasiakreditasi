@@ -1,4 +1,5 @@
-<?php 
+<?php
+
 use App\Models\Dokumen_indikator;
 ?>
 @extends('layouts.default')
@@ -28,16 +29,16 @@ use App\Models\Dokumen_indikator;
                                 <input type="file" class="form-control" name="led" id="default-01" required accept="application/pdf">
                             </div>
                         </div>
-                    
+
                         <div class="form-group">
-                            <label class="form-label" for="default-02">LKPS</label>
+                            <label class="form-label" for="default-02">Tabel Isian LKPS</label>
                             <div class="form-control-wrap">
                                 <input type="file" class="form-control" name="lkps" id="default-02" required accept=" application/vnd.ms-excel, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet">
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <label class="form-label" for="default-02">Tabel Isian LKPS</label>
+                            <label class="form-label" for="default-02">LKPS</label>
                             <div class="form-control-wrap">
                                 <input type="file" class="form-control" name="lkps_isian" id="default-02" required accept="application/pdf">
                             </div>
@@ -67,20 +68,19 @@ use App\Models\Dokumen_indikator;
 </section>
 <script type="text/javascript">
     var nongol = 0;
+
     function add_form() {
         nongol++;
 
-            selection_form ='<div class="col-md-12">'+
-                                '<label>Lampiran</label>'+
-                                '<div class="form-group">'+
-                                    '<div class="form-line">'+
-                                        '<input type="file" id="form-field-1" class="form-control" name="lampiran[]"/>'+
-                                    '</div>'+
-                                '</div>'+
-                            '</div>'
-            $('#form-jadwal').append(selection_form);
+        selection_form = '<div class="col-md-12">' +
+            '<label>Lampiran</label>' +
+            '<div class="form-group">' +
+            '<div class="form-line">' +
+            '<input type="file" id="form-field-1" class="form-control" name="lampiran[]"/>' +
+            '</div>' +
+            '</div>' +
+            '</div>'
+        $('#form-jadwal').append(selection_form);
     }
 </script>
 @endsection
-
-
